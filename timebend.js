@@ -2,7 +2,7 @@ if(TimeBendSpell === undefined) var TimeBendSpell = {};
 TimeBendSpell.name = 'Time Bend Spell';
 TimeBendSpell.id = 'TimeBendSpell';
 TimeBendSpell.version = '1.0';
-TimeBendSpell.GameVersion = '2.042';
+TimeBendSpell.GameVersion = '2.031';
 
 // TODO: bug on having this mod enabled when beginning a fresh save
 
@@ -28,12 +28,7 @@ TimeBendSpell.launch = function(){
       "Time accelerated by %1% for %2": "/",
       "Time decelerated by %1% for %2": "/",
     };
-    for (var i in locstrs){
-			if (locstrs[i]=='/') locstrs[i]=i;
-		}
-    AddLanguage('EN', 'english', locstrs, true);
-
-    
+  
     TimeBendSpell.ComputeTime = function(){
       return (TimeBendSpell.accelerationFactor + TimeBendSpell.decelerationFactor)/2;
     }
